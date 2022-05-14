@@ -1,0 +1,71 @@
+// SASS Mixin import
+@import './mixins';
+
+// Tailwind import
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// base theme
+:root {
+  // Backgrounds
+  --primary: #{hexToRGBString(#fff)};
+  --secondary: #{hexToRGBString(#0d1117)};
+
+  // Texts
+  --text-primary: rgba(0, 0, 0, 0.85);
+  --text-secondary: #{hexToRGBString(#fff)};
+
+  // Links
+  --link-base: theme('colors.gray.500');
+  --link-active: theme('colors.gray.900');
+
+  // Border
+  --border-0: rgba(229, 230, 228, 0.7);
+}
+
+// dark theme
+.dark {
+  // Backgrounds
+  --primary: #{hexToRGBString(#0d1117)};
+  --secondary: #{hexToRGBString(#fff)};
+
+  // Texts
+  --text-primary: #{hexToRGBString(#fff)};
+  --text-secondary: rgba(0, 0, 0, 0.85);
+
+  // Border
+  --border-0: #{hexToRGBString(#444444)};
+}
+
+html,
+body {
+  @apply m-0 h-full min-h-full bg-primary text-primary overscroll-x-none p-0 antialiased;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-feature-settings: 'rlig' 1, 'calt' 0, 'zero', 'cv02', 'cv03', 'cv04',
+    'cv11';
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#__next {
+  @apply flex items-center w-full justify-between flex-col scroll-smooth;
+}
+
+main {
+  @apply flex-1 w-full;
+}
+
+img {
+  @apply select-none;
+}

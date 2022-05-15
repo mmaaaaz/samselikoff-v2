@@ -7,7 +7,7 @@ const DesktopLinks = () => {
   const { asPath } = useRouter()
 
   return (
-    <ul className="flex items-center justify-between gap-6 lg:text-base xl:text-lg lg:gap-8">
+    <ul className="md:flex hidden items-center justify-between gap-6 lg:text-primary xl:text-lg lg:gap-8">
       {config.links.map(({ href, label }) => {
         return (
           <li key={label}>
@@ -15,7 +15,7 @@ const DesktopLinks = () => {
               href={href}
               className={clsx(
                 'hover:text-link-active',
-                asPath === href ? 'text-link-active' : 'text-link-base'
+                asPath === href ? 'text-link-active' : 'text-link-primary'
               )}
             >
               {label}

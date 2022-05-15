@@ -6,6 +6,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .full-width {
+    @apply w-screen relative left-2/4 right-2/4 mx-[-50vw];
+  }
+
+  .full-width-none {
+    @apply w-auto relative left-auto right-auto mx-auto;
+  }
+}
+
 // base theme
 :root {
   // Backgrounds
@@ -13,15 +23,32 @@
   --secondary: #{hexToRGBString(#0d1117)};
 
   // Texts
-  --text-primary: rgba(0, 0, 0, 0.85);
-  --text-secondary: #{hexToRGBString(#fff)};
+  --text-primary: theme('colors.gray.800');
+  --text-secondary: theme('colors.white');
+
+  --text-lead: theme('colors.gray.700');
 
   // Links
-  --link-base: theme('colors.gray.500');
+  --link-primary: theme('colors.gray.600');
   --link-active: theme('colors.gray.900');
 
+  // Icons
+  --icon-primary: theme('colors.gray.700');
+  --icon-hover: theme('colors.gray.800');
+
   // Border
-  --border-0: rgba(229, 230, 228, 0.7);
+  --border-0: theme('colors.gray.200');
+
+  // Accents
+  --a1: theme('colors.gray.100');
+  --a2: theme('colors.gray.200');
+  --a3: theme('colors.gray.300');
+  --a4: theme('colors.gray.400');
+  --a5: theme('colors.gray.500');
+  --a6: theme('colors.gray.600');
+  --a7: theme('colors.gray.700');
+  --a8: theme('colors.gray.800');
+  --a9: theme('colors.gray.900');
 }
 
 // dark theme
@@ -31,11 +58,32 @@
   --secondary: #{hexToRGBString(#fff)};
 
   // Texts
-  --text-primary: #{hexToRGBString(#fff)};
-  --text-secondary: rgba(0, 0, 0, 0.85);
+  --text-primary: theme('colors.white');
+  --text-secondary: theme('colors.gray.800');
+
+  --text-lead: theme('colors.gray.300');
+
+  // Links
+  --link-primary: theme('colors.gray.500');
+  --link-active: theme('colors.gray.50');
+
+  // Icons
+  --icon-primary: theme('colors.gray.300');
+  --icon-hover: theme('colors.gray.50');
 
   // Border
-  --border-0: #{hexToRGBString(#444444)};
+  --border-0: theme('colors.gray.800');
+
+  // Accents
+  --a9: theme('colors.gray.100');
+  --a8: theme('colors.gray.200');
+  --a7: theme('colors.gray.300');
+  --a6: theme('colors.gray.400');
+  --a5: theme('colors.gray.500');
+  --a4: theme('colors.gray.600');
+  --a3: theme('colors.gray.700');
+  --a2: theme('colors.gray.800');
+  --a1: theme('colors.gray.900');
 }
 
 html,

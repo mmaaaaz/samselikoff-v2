@@ -20,6 +20,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
+      "public": ["public/*"],
       "site.config": ["src/site.config.ts"]
     }
   },

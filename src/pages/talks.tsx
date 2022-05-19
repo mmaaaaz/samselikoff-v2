@@ -83,7 +83,9 @@ const Talk = ({
           {presentedAt}
         </p>
         <p className="text-lg font-semibold md:text-2xl lg:text-xl lg:mt-1">
-          <a href={url}>{title}</a>
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            {title}
+          </a>
         </p>
       </div>
     </>
@@ -114,7 +116,9 @@ const Interview = ({
       <div className="leading-snug">
         <p className="mt-3 text-sm font-semibold text-gray-500">{byline}</p>
         <p className="mt-1 text-lg font-semibold">
-          <a href={url}>{title}</a>
+          <a href={url} target="_blank" rel="noopener noreferrer">
+            {title}
+          </a>
         </p>
       </div>
     </>

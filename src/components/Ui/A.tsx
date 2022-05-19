@@ -28,7 +28,7 @@ const A = ({
       )}
       {...props}
     >
-      {children}
+      <a>{children}</a>
     </Link>
   )
 }

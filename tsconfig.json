@@ -21,9 +21,15 @@
     "paths": {
       "@/*": ["src/*"],
       "public": ["public/*"],
-      "site.config": ["src/site.config.ts"]
+      "site.config": ["src/site.config.ts"],
+      "contentlayer/generated": ["./.contentlayer/generated"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".contentlayer/generated"
+  ],
   "exclude": ["node_modules"]
 }

@@ -15,3 +15,12 @@ export interface IInterview {
   imageHeight: number
   url: string
 }
+
+export interface IPodcast {
+  title: string
+  imageUrl: string
+  imageWidth: number
+  imageHeight: number
+  url: string
+  description: string
+}

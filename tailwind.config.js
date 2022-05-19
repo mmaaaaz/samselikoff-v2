@@ -70,9 +70,6 @@ module.exports = {
         'icon-primary': 'var(--icon-primary)',
         'icon-hover': 'var(--icon-hover)',
 
-        // Borders
-        0: 'var(--border-0)',
-
         // Accents
         a1: 'var(--a1)',
         a2: 'var(--a2)',

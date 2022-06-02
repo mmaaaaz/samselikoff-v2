@@ -1,8 +1,7 @@
-import { useMDXComponent } from 'next-contentlayer/hooks'
-import Head from 'next/head'
 import { MDXLink, MDXPre } from '@/components/MDX'
-import Image from 'next/image'
 import { type Blog } from 'contentlayer/generated'
+import Head from 'next/head'
+import Image from 'next/image'
 
 export const MDXComponents: any = {
   Image,
@@ -12,21 +11,13 @@ export const MDXComponents: any = {
   // BlogNewsletterForm,
 }
 
-const BlogPost = ({ post }: { post: Blog }) => {
-  const MDXContent = useMDXComponent(post.body.code)
-
-  console.log(post)
-
+export const BlogPost = ({ post }: { post: Blog }) => {
   return (
     <>
       <Head>
         <title>{post.title}</title>
         {/* <meta name="description" content={post.summary} /> */}
       </Head>
-
-      <MDXContent components={MDXComponents} />
     </>
   )
 }
-
-export default BlogPost

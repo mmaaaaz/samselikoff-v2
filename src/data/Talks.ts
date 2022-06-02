@@ -1,6 +1,6 @@
 import { ITalk } from '@/types'
 
-const talks: ITalk[] = [
+export const talks: ITalk[] = [
   {
     title: 'Stop Coding: You Have a Product Gap',
     presentedAt: 'EmberCamp 2018',
@@ -59,5 +59,3 @@ const talks: ITalk[] = [
     url: 'https://www.youtube.com/watch?v=kFCDA1uzGFo',
   },
 ]
-
-export default talks

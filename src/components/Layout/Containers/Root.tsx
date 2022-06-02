@@ -1,8 +1,8 @@
+import { ThemeProvider } from 'next-themes'
 import { ReactNode } from 'react'
 import { Header } from '../'
-import { ThemeProvider } from 'next-themes'
 
-const Root = ({ children }: { children: ReactNode }) => {
+export const Root = ({ children }: { children: ReactNode }) => {
   return (
     <ThemeProvider attribute="class">
       <Header />
@@ -11,5 +11,3 @@ const Root = ({ children }: { children: ReactNode }) => {
     </ThemeProvider>
   )
 }
-
-export default Root

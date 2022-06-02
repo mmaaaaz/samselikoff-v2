@@ -12,8 +12,6 @@ const styles = {
   large: 'max-w-2xl px-6 mx-auto md:max-w-xl', // Projects
 }
 
-const Container = ({ size, children }: IContainer) => {
+export const Container = ({ size, children }: IContainer) => {
   return <div className={styles[size]}>{children}</div>
 }
-
-export default Container

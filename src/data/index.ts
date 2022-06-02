@@ -1,4 +1,4 @@
-export { default as talks } from './Talks'
-export { default as interviews } from './Interviews'
+export { interviews } from './Interviews'
+export { Podcasts } from './Podcasts'
 export { currentProjects, pastProjects } from './Projects'
-export { default as Podcasts } from './Podcasts'
+export { talks } from './Talks'

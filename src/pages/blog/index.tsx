@@ -2,14 +2,7 @@ import { Container, Spacer, Title } from '@/components/Ui'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 
-import { allBlogs, type Blog } from 'contentlayer/generated'
-import Link from 'next/link'
-
-interface IBlogPage {
-  Blogs: Blog[]
-}
-
-const BlogPage: NextPage<IBlogPage> = ({ Blogs }) => {
+const BlogPage: NextPage = ({ Blogs }: any) => {
   console.log(Blogs)
 
   return (
@@ -26,7 +19,7 @@ const BlogPage: NextPage<IBlogPage> = ({ Blogs }) => {
           <Title>Blog</Title>
 
           <ul className="mt-12 leading-snug">
-            {allBlogs.map(({ slug, title }) => (
+            {/* {allBlogs.map(({ slug, title }) => (
               <li className="mt-6 md:mt-10" key={slug}>
                 <Link href={slug}>
                   <a className="inline-block">
@@ -36,7 +29,7 @@ const BlogPage: NextPage<IBlogPage> = ({ Blogs }) => {
                   </a>
                 </Link>
               </li>
-            ))}
+            ))} */}
           </ul>
         </Container>
       </div>
@@ -47,9 +40,5 @@ const BlogPage: NextPage<IBlogPage> = ({ Blogs }) => {
 export default BlogPage
 
 export async function getStaticProps() {
-  const Blogs: string[] | undefined = allBlogs.map(
-    (blog) => blog._raw.flattenedPath
-  )
-
-  return { props: { Blogs } }
+  return { props: { Blogs: [] } }
 }

@@ -10,11 +10,11 @@ interface IA {
   href: string
 }
 
-const A = ({
+export const A = ({
   children,
   font = 'medium',
   underline = true,
-  className = '',
+  // className = '',
   href,
   ...props
 }: IA) => {
@@ -28,9 +28,7 @@ const A = ({
       )}
       {...props}
     >
-      <a>{children}</a>
+      {children}
     </Link>
   )
 }
-
-export default A

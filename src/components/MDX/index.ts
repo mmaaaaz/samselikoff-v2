@@ -1,2 +1,2 @@
-export { default as MDXLink } from './Link'
-export { default as MDXPre } from './Pre'
+export { Link as MDXLink } from './Link'
+export { Pre as MDXPre } from './Pre'

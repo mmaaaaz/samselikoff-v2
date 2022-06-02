@@ -1,6 +1,6 @@
 import { IInterview } from '@/types'
 
-const interviews: IInterview[] = [
+export const interviews: IInterview[] = [
   {
     url: 'https://reactpodcast.simplecast.com/episodes/110',
     image: '/images/interviews/react-podcast.jpg',
@@ -66,5 +66,3 @@ const interviews: IInterview[] = [
     title: 'Sam Selikoff',
   },
 ]
-
-export default interviews

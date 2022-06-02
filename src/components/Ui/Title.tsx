@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import { ReactNode } from 'react'
 
 interface ITitle {
@@ -6,12 +7,19 @@ interface ITitle {
 }
 
 const styles = {
-  sm: 'text-4xl font-semibold leading-tight text-primary md:text-5xl lg:text-6xl lg:leading-none lg:font-medium xl:text-7xl',
-  md: 'text-5xl font-semibold leading-tight text-primary md:text-6xl md:leading-none lg:text-7xl lg:font-medium xl:text-8xl',
+  sm: 'text-4xl md:text-5xl lg:text-6xl lg:leading-none xl:text-7xl',
+  md: 'text-5xl md:text-6xl md:leading-none lg:text-7xl xl:text-8xl',
 }
 
-const Title = ({ size = 'md', children }: ITitle) => {
-  return <div className={styles[size]}>{children}</div>
+export const Title = ({ size = 'md', children }: ITitle) => {
+  return (
+    <div
+      className={clsx(
+        'font-semibold leading-tight text-primary lg:font-medium',
+        styles[size]
+      )}
+    >
+      {children}
+    </div>
+  )
 }
-
-export default Title

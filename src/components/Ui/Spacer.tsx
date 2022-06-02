@@ -8,8 +8,6 @@ const styles = {
   xl: 'mt-8 md:mt-16 xl:mt-24',
 }
 
-const Spacer = ({ size }: ISpacer) => {
+export const Spacer = ({ size }: ISpacer) => {
   return <div className={styles[size]} />
 }
-
-export default Spacer

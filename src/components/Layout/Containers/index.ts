@@ -1,2 +1,2 @@
-export { default as Root } from './Root'
-export { default as BlogPost } from './BlogPost'
+export { BlogPost } from './BlogPost'
+export { Root } from './Root'

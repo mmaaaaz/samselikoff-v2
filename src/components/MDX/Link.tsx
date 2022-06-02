@@ -1,4 +1,4 @@
-const Link = (props: any) => {
+export const Link = (props: any) => {
   const href = props.href
   const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'))
 
@@ -12,5 +12,3 @@ const Link = (props: any) => {
 
   return <a target="_blank" rel="noopener noreferrer" {...props} />
 }
-
-export default Link

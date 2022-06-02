@@ -1,4 +1,4 @@
-const Podcasts = [
+export const Podcasts = [
   {
     title: 'Adam Wathan on Tailwind CSS',
     url: 'https://embermap.com/podcast/adam-wathan-on-tailwind-css',
@@ -43,5 +43,3 @@ const Podcasts = [
     description: `This is a good representitive episode of the show since it's just Ryan and me talking. It's a bit of a special episode though, because in this one we do a deep dive of the wonderful essay "APIs are about Policy" by Steven Wittens.`,
   },
 ]
-
-export default Podcasts

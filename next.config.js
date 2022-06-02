@@ -1,5 +1,3 @@
-import { withContentlayer } from 'next-contentlayer'
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   swcMinify: true,
@@ -8,6 +6,9 @@ const nextConfig = {
   experimental: {
     newNextLinkBehavior: true,
     scrollRestoration: true,
+
+    legacyBrowsers: false,
+    browsersListForSwc: true,
   },
 
   compiler: {
@@ -21,5 +22,4 @@ const nextConfig = {
   },
 }
 
-export default withContentlayer({ nextConfig })
-// export default nextConfig
+module.exports = nextConfig

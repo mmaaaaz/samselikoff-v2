@@ -1,5 +1,4 @@
 import { MDXLink, MDXPre } from '@/components/MDX'
-import { type Blog } from 'contentlayer/generated'
 import Head from 'next/head'
 import Image from 'next/image'
 
@@ -11,7 +10,7 @@ export const MDXComponents: any = {
   // BlogNewsletterForm,
 }
 
-export const BlogPost = ({ post }: { post: Blog }) => {
+export const BlogPost = ({ post }: { post: any }) => {
   return (
     <>
       <Head>
